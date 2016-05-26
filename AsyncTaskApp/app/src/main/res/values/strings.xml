@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AsyncTaskApp</string>
+    <string name="btn_name">DownloadingFile</string>
+</resources>
