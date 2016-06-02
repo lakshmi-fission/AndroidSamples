@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InternalMemoryExample</string>
+    <string name="editTextUser">Enter UserName</string>
+    <string name="editTextPass">Enter Password</string>
+    <string name="savebtn">save</string>
+    <string name="readbtn">read</string>
+</resources>

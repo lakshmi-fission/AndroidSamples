@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+<EditText
+    android:id="@+id/usernameEdt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:hint="UserName"
+    />
+<EditText
+    android:id="@+id/passwordEdt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:hint="Password"
+    android:layout_below="@+id/usernameEdt"
+    />
+<EditText
+    android:id="@+id/confirmpassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword"
+    android:hint="ConfirmPassword"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_below="@+id/passwordEdt"/>
+<Button
+    android:id="@+id/signUpSubmit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    android:layout_below="@+id/confirmpassword"
+    android:layout_margin="50dp"/>
+
+
+</RelativeLayout>

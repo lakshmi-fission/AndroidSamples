@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fission.sample.internalmemoryexample.MainActivity">
+
+   <EditText
+       android:id="@+id/edittxt1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/activity_horizontal_margin"
+       android:hint="@string/editTextUser"
+       android:textColorHint="@color/colorAccent"
+       android:shadowColor="@color/colorPrimary"
+       />
+    <EditText
+        android:id="@+id/edittxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:hint="@string/editTextUser"
+        android:textColorHint="@color/colorAccent"
+        android:shadowColor="@color/colorPrimary"
+        android:inputType="textPassword"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savebtn"/>
+        <Button
+            android:id="@+id/readbtn"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/readbtn"
+            android:layout_toRightOf="@id/savebtn"/>
+    </RelativeLayout>
+</LinearLayout>

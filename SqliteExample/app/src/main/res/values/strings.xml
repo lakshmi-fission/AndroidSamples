@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SqliteExample</string>
+    <string name="nameHint">Name</string>
+    <string name="phnoHint">Phone Number</string>
+    <string name="branchHint">Branch</string>
+    <string name="insertBtnTxt">Insert</string>
+    <string name="deleteBtnTxt">delete</string>
+    <string name="showOneBtnTxt">showOne</string>
+    <string name="showAllBtnTxt">showAll</string>
+</resources>

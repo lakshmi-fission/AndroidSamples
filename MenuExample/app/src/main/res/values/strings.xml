@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MenuExample</string>
+    <string name="item1">AlertDialog</string>
+    <string name="item2">CustomAlertDialog</string>
+    <string name="item3">DialogExtended</string>
+    <string name="forPositiveBtn">required</string>
+    <string name="Title">CustomAlertDialogExample</string>
+    <string name="forNegativeBtn">Not required</string>
+    <string name="TitleFor3rdItem">DialogExtendExample</string>
+    <string name="textViewFor3rdItem">"U like it?"</string>
+    <string name="alertDialogTitle">"AlertDialogExample"</string>
+    <string name="Dialogno">"No"</string>
+    <string name="Dialogyes">"Yes"</string>
+    <string name="alertDialog">"Do you want to close this application ?"</string>
+
+</resources>
