@@ -1,6 +1,7 @@
 package com.fission.sample.sqliteexample;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         public void onClick(View v) {
                             String name = deleteName.getText().toString();
                             mydatabase.deleteContact(name);
-                            Toast.makeText(getApplicationContext(), name + "related data Deleted Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), name + " Related data Deleted Successfully", Toast.LENGTH_SHORT).show();
                         }
                     });
                 break;
@@ -60,14 +61,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String name = mNameEdt.getText().toString();
                 String phno = mPhnoEdt.getText().toString();
                String  branch = mBranchEdt.getText().toString();
-                mydatabase.insertPerson(name,phno,branch);
-                Toast.makeText(getApplicationContext(),"data inserted Sucessfully",Toast.LENGTH_SHORT).show();
+                boolean inserted = mydatabase.insertPerson(name,phno,branch);
+                if(inserted){
+                Toast.makeText(getApplicationContext(),"Data inserted Successfully",Toast.LENGTH_SHORT).show();}
+                else
+                {
+                    Toast.makeText(getApplicationContext()," Duplicate data not allowed ",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.showall:
-
-                setContentView(R.layout.showall_layout);
+                Intent intent =new Intent(MainActivity.this,ListActivity.class);
+                startActivity(intent);
+                /*setContentView(R.layout.showall_layout);
                 mListView = (ListView) findViewById(R.id.listView);
-                Cursor res = mydatabase.showAll();
+               Cursor res = mydatabase.showAll();
+
+
                 res.moveToFirst();
                 String[] columns = new String[]{ExampleDBHelper.PERSON_COLUMN_ID,ExampleDBHelper.PERSON_COLUMN_BRANCH,
                       ExampleDBHelper.PERSON_COLUMN_NAME,ExampleDBHelper.PERSON_COLUMN_PHNO
@@ -76,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         R.id.personIdTxt,R.id.personBranchTxt,R.id.personNameTxt,R.id.personPhnoTxt
                 };
                 SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(this,R.layout.adapter_view,res,columns,rows,0);
-                mListView.setAdapter(cursorAdapter);
+                mListView.setAdapter(cursorAdapter);*/
                 break;
             case R.id.showone:
                 Dialog dialog1 = new Dialog(this);
@@ -91,6 +100,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         @Override
                         public void onClick(View v) {
                             Cursor res = mydatabase.showOne(showName.getText().toString());
+                            if(res.getCount()==0){
+                                Toast.makeText(getApplicationContext()," There is No details for entered name ",Toast.LENGTH_SHORT).show();
+                            }
+                            else{
                                 res.moveToFirst();
                             String personBranch=res.getString(res.getColumnIndex(ExampleDBHelper.PERSON_COLUMN_BRANCH));
                             String personPhno=res.getString(res.getColumnIndex(ExampleDBHelper.PERSON_COLUMN_PHNO));
@@ -99,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(getApplicationContext(),personName,Toast.LENGTH_SHORT).show();
                             Toast.makeText(getApplicationContext(),personBranch,Toast.LENGTH_SHORT).show();
                             Toast.makeText(getApplicationContext(),personPhno,Toast.LENGTH_SHORT).show();
+                            }
                            // Log.e("A","personName"+personName);
                             //Log.e("A","personBranch"+personBranch);
                            // Log.e("A","personPhno"+personPhno);
@@ -114,5 +128,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+   /* @Override
+   public void onBackPressed() {
+        super.onBackPressed();
+        setContentView(R.layout.activity_main);
+    }*/
 }
 

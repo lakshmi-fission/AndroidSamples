@@ -7,4 +7,5 @@
     <string name="deleteBtnTxt">delete</string>
     <string name="showOneBtnTxt">showOne</string>
     <string name="showAllBtnTxt">showAll</string>
+    <string name="showDialogBtn">show</string>
 </resources>

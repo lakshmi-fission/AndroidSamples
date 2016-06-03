@@ -10,13 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:hint="Name"/>
+        android:hint="@string/nameHint"/>
     <Button
         android:id="@+id/showBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:text="Show"/>
+        android:text="@string/showDialogBtn"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.fission.sample.sharedpreferencesexample;
+package com.fission.sample.sharedloginexample;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,65 +18,59 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
     String userName;
     String password;
-    String userNameKey;
-    String passwordKey;
-    boolean login1;
+    //String userNameKey = "userNameKey";
+    //String passwordKey = "passwordKey";
     SharedPreferences sharedPreferences;
     private EditText mUserNameEdt, mPasswordEdt;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button signUpbtn = (Button) findViewById(R.id.signUpbtn);
         sharedPreferences = getSharedPreferences("preference", Context.MODE_PRIVATE);
-        login1 = sharedPreferences.getBoolean("loginKey", false);
-        if (login1) {
-            signUpbtn.setVisibility(View.INVISIBLE);
-        } else {
-            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-            //SharedPreferences.Editor editor1 = sharedPreferences.edit();
-            //editor1.putBoolean("loginKey",true);
-            //editor1.commit();
-            startActivity(intent);
-        }
+
 
         mUserNameEdt = (EditText) findViewById(R.id.edittext1);
         mPasswordEdt = (EditText) findViewById(R.id.edittext2);
-
+        Button signUpbtn = (Button) findViewById(R.id.signUpbtn);
         Button loginBtn = (Button) findViewById(R.id.button1);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPreferences sharedPreferences = getSharedPreferences("preference", MODE_PRIVATE);
-                userName = sharedPreferences.getString(userNameKey, "");
-                password = sharedPreferences.getString(passwordKey, "");
-                //Log.e("storedUsername",userName);
-                //Log.e("storedPassword",password);
-                if ((TextUtils.isEmpty(mUserNameEdt.getText())) || (!(mUserNameEdt.getText().toString().equals(userName)))) {
+                userName = sharedPreferences.getString("userNameKey","");
+                boolean output = sharedPreferences.contains("userNameKey");
+                //String someValue = sharedPreferences.getString("userNameKey","someValue");
+                //Log.e("A","someValue"+someValue);
+                Log.e("A","key contains or not "+output);
+                Log.e("A","key value "+userName);
+                password = sharedPreferences.getString("passwordKey","");
+                if(TextUtils.isEmpty(userName)){
+                   Toast.makeText(getApplicationContext(), "Please register first", Toast.LENGTH_SHORT).show();
+               }
+               else if ((TextUtils.isEmpty(mUserNameEdt.getText())) || (!(mUserNameEdt.getText().toString().equals(userName)))) {
                     Toast.makeText(getApplicationContext(), "Please enterValidUsername", Toast.LENGTH_SHORT).show();
-                    //System.out.println("Please enter validusername");
+
                 } else if ((TextUtils.isEmpty(mPasswordEdt.getText())) || (!(mPasswordEdt.getText().toString().equals(password)))) {
                     Toast.makeText(getApplicationContext(), "Please enterValidPassword", Toast.LENGTH_SHORT).show();
-                    //System.out.println("Please enter validpassword");
+
                 } else {
                     Toast.makeText(getApplicationContext(), "Entered UserName and Password are correct", Toast.LENGTH_SHORT).show();
-                    // System.out.println("Entered username and password are correct");
+
 
                 }
 
 
-                //Log.e("storedUsername",userName);
-                //Log.e("storedPassword",password);
+
             }
         });
 
-        /*signUpbtn.setOnClickListener(new View.OnClickListener() {
+        signUpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
     }
 }

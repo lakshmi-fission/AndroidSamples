@@ -2,25 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backGroundColor"
     android:orientation="vertical">
     <EditText
         android:id="@+id/usernameEdt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:shadowColor="@color/shadowColor"
+        android:textStyle="italic"
+        android:textColorHint="@color/textColor"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:hint="@string/nameHint"
         />
     <EditText
         android:id="@+id/phnodEdt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColorHint="@color/textColor"
+        android:shadowColor="@color/shadowColor"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:hint="@string/phnoHint"
         />
     <EditText
         android:id="@+id/personBranchEdt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:shadowColor="@color/shadowColor"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
         android:hint="@string/branchHint"
         android:layout_margin="@dimen/activity_horizontal_margin"
         />
@@ -28,37 +39,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         >
-        <Button
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+        <RadioButton
+
             android:id="@+id/insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/insertBtnTxt"
+            android:textStyle="italic"
+            android:textColor="@color/textColor"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/delete"
-             />
-        <Button
+            />
+        <RadioButton
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/textColor"
             android:text="@string/deleteBtnTxt"
             android:layout_alignParentTop="true" />
-        <Button
+        <RadioButton
             android:id="@+id/showall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/showAllBtnTxt"
+            android:textStyle="italic"
+            android:textColor="@color/textColor"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/insert"
             />
-        <Button
+        <RadioButton
         android:id="@+id/showone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@color/textColor"
             android:text="@string/showOneBtnTxt"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/showall"
              />
-
+        </RadioGroup>
     </RelativeLayout>
+
 </LinearLayout>

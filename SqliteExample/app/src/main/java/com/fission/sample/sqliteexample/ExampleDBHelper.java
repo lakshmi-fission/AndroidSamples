@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 public class ExampleDBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 3;
@@ -35,7 +36,10 @@ public class ExampleDBHelper extends SQLiteOpenHelper {
         contentValues.put(PERSON_COLUMN_NAME,name);
         contentValues.put(PERSON_COLUMN_PHNO,phno);
         contentValues.put(PERSON_COLUMN_BRANCH,branch);
-        db.insert(PERSON_TABLE_NAME, null, contentValues);
+        long error =db.insert(PERSON_TABLE_NAME, null, contentValues);
+        if(error==-1)
+           return false;
+        else
         return  true;
     }
    /* public boolean updatePerson(String name, String phno, String branch) {
@@ -51,7 +55,8 @@ public class ExampleDBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         //String[] requiredColumns = {PERSON_COLUMN_ID,PERSON_COLUMN_NAME,PERSON_COLUMN_BRANCH,PERSON_COLUMN_PHNO};
         Cursor res =  db.rawQuery( "select * from "+PERSON_TABLE_NAME+ " where name = '" + name+"'", null );
-        res.getCount();
+        //res.getCount();
+        //Log.e("A","cursor count "+res.getCount());
         return res;
     }
     public Cursor showAll(){

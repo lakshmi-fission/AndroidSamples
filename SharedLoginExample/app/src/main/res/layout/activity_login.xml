@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingTop="100dp"
+    >
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/edittext1"
+        android:hint="EnterUsername"
+        android:layout_marginBottom="5dp"
+        android:shadowColor="@color/red"
+        android:textColorHint="@color/skyblue"
+        android:textColor="@color/skyblue"
+        android:textStyle="italic"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/edittext2"
+        android:hint="EnterPassword"
+
+        android:inputType="textPassword"
+        android:textColor="@color/skyblue"
+        android:textColorHint="@color/skyblue"
+        android:shadowColor="@color/red"
+        android:textStyle="italic"
+
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:id="@+id/button1"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:background="@drawable/buttonshape"
+            android:textStyle="italic"
+            android:shadowColor="@color/red"/>
+        <Button
+            android:id="@+id/signUpbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonshape"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/button1"
+            android:text="SignUp"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+</LinearLayout>

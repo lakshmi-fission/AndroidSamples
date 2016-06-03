@@ -1,4 +1,4 @@
-package com.fission.sample.sharedpreferencesexample;
+package com.fission.sample.sharedloginexample;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,8 +13,8 @@ import android.widget.Toast;
 public class SignUpActivity extends AppCompatActivity {
     Button submitBtn;
     EditText muserNameEdt, mpasswordEdt, confirmPasswordEdt;
-    String userNameKey;
-    String passwordKey;
+    //String userNameKey = "userNameKey";
+    //String passwordKey = "passwordKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,8 @@ public class SignUpActivity extends AppCompatActivity {
                     String username = muserNameEdt.getText().toString();
                     String password = mpasswordEdt.getText().toString();
                     SharedPreferences.Editor editor = sharedPreference.edit();
-                    editor.putString(userNameKey, username);
-                    editor.putString(passwordKey, password);
-                    editor.putBoolean("loginKey", true);
+                    editor.putString("userNameKey", username);
+                    editor.putString("passwordKey", password);
                     editor.commit();
                     Toast.makeText(getApplicationContext(), "Details successfully submitted", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
