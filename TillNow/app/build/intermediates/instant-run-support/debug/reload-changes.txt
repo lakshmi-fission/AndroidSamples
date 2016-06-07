@@ -1,11 +1,4 @@
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$integer$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$style$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$string$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$layout$override.class
+CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/HomeActivity$1$override.class
 CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$menu$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$mipmap$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$id$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/R$styleable$override.class
-CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/LoginFragment$2$override.class
+CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/ListViewFragment$3$override.class
+CHANGED,/home/lakshmi/AndroidStudioProjects/TillNow/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/fission/sample/tillnow/HomeActivity$override.class

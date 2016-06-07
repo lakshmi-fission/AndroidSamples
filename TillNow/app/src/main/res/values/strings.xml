@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TillNow</string>
+    <string name="home">Home</string>
+    <string name = "homeBtn">showImages</string>
+    <string name="alertDialog">"Do you want to close this application ?"</string>
+    <string name="alertDialogTitle">"AlertDialogExample"</string>
+
+</resources>
